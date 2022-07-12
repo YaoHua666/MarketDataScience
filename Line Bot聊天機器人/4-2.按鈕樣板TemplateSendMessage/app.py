@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Jun  2 21:16:35 2021
-
 @author: Ivan
 版權屬於「行銷搬進大程式」所有，若有疑問，可聯絡ivanyang0606@gmail.com
-
 Line Bot聊天機器人
 第四章 選單功能
 按鈕樣板TemplateSendMessage
@@ -23,11 +21,12 @@ import re
 app = Flask(__name__)
 
 # 必須放上自己的Channel Access Token
-line_bot_api = LineBotApi('你自己的token')
+line_bot_api = LineBotApi('imKUbR5owj/HfUxZfSyJSvVHtgSRd2AHnJSB+xRLimWKKOGK4nrnYtNAPWNZgLJuIObEqjbBoXJQY6T2KrqVUR5euHcDCZ11rLkI5iLQppH/eHFN0bg27dcp7/EMSpGktwFovXySG5BaLQnYt7A0awdB04t89/1O/w1cDnyilFU=')
+                           
 # 必須放上自己的Channel Secret
-handler = WebhookHandler('你自己的secret')
+handler = WebhookHandler('6b3b4eb751a515bd18707d6c52f960c1')
 
-line_bot_api.push_message('你自己的ID', TextSendMessage(text='你可以開始了'))
+line_bot_api.push_message('U5114b2219d7c4ddfedadbd48d50e41f2', TextSendMessage(text='我..叫家鋐..我瘋起來我自己都怕!!!!'))
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
